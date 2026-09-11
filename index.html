@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fancy & Reverse Font Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tool-card">
+  <div class="tool-header">
+    <h1>Fancy & Reverse Font Generator</h1>
+    <p>Convert Text into Upside Down & Clean Unicode Font Styles</p>
+  </div>
+
+  <div class="tool-body">
+    <div>
+      <label class="step-label">1. Type Your Text</label>
+      <input type="text" id="userInput" placeholder="Type text here..." oninput="renderFonts()">
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="tabs-container">
+      <button class="tab-btn active" onclick="switchTab('all', this)">All Styles</button>
+      <button class="tab-btn" onclick="switchTab('reverse', this)">Reverse & Flip</button>
+      <button class="tab-btn" onclick="switchTab('fonts', this)">Pure Unicode Fonts</button>
+    </div>
+
+    <div>
+      <label class="step-label">2. Select & Copy Style</label>
+      <div id="fontResults" class="font-list">
+        <div style="color: #65676b; font-size: 14px; text-align: center; padding: 20px;">Start typing above to see styles...</div>
+      </div>
+    </div>
+
+    <div id="alertMsg" class="alert-msg">Copied to Clipboard!</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
